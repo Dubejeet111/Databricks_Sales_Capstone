@@ -1,5 +1,5 @@
 bundle:
-  name: databricks_cicd_demo
+  name: databricks_sales_capstone
 
 include:
   - resources/*.yml
