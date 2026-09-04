@@ -38,4 +38,4 @@ jobs:
           DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_CLIENT_ID }}
           DATABRICKS_CLIENT_SECRET: ${{ secrets.DATABRICKS_CLIENT_SECRET }}
         run: |
-          databricks bundle run Sales_ETL_Pipeline_Capstone
+          databricks bundle run sales_job

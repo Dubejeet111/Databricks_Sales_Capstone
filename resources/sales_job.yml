@@ -4,7 +4,21 @@ resources:
       name: Sales_ETL_Pipeline_Capstone
 
       tasks:
-        - task_key: run_sales_notebook
+        - task_key: run_bronze_notebook
 
           notebook_task:
             notebook_path: ../src/01_Bronze_Ingestion.ipynb
+
+        - task_key: run_silver_notebook
+          depends_on:
+            - task_key: run_bronze_notebook
+
+          notebook_task:
+            notebook_path: ../src/02_Silver_Cleaning.ipynb
+
+        - task_key: run_gold_notebook
+          depends_on:
+            - task_key: run_silver_notebook
+
+          notebook_task:
+            notebook_path: ../src/03_Gold_Analytics.ipynb
