@@ -1,0 +1,10 @@
+resources:
+  jobs:
+    sales_job:
+      name: Sales_ETL_Pipeline_Capstone
+
+      tasks:
+        - task_key: run_sales_notebook
+
+          notebook_task:
+            notebook_path: ../src/01_Bronze_Ingestion.ipynb
