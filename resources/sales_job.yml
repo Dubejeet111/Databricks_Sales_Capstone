@@ -2,6 +2,8 @@ resources:
   jobs:
     sales_job:
       name: Sales_ETL_Pipeline_Capstone
+      run_as:
+        user_name: dubejeet111@gmail.com
 
       tasks:
         - task_key: run_bronze_notebook
